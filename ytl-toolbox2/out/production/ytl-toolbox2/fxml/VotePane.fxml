@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.SegmentedButton?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+<fx:root prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="111.0" layoutY="22.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ImageView fx:id="voteOptions" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/options.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="%gui.vote.options" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ImageView fx:id="votePieChart" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/piechart.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="%gui.vote.piechart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ImageView fx:id="voteBarChart" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/barchart.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="%gui.vote.barchart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ImageView fx:id="votePanel" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/panel.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="%gui.vote.panel" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <TextField fx:id="secondsField" prefHeight="26.0" prefWidth="55.0" promptText="30" />
+                  <Label text="%gui.vote.seconds">
+                     <HBox.margin>
+                        <Insets left="-6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="seButton" mnemonicParsing="false" text="%gui.vote.se.start" />
+                  <ProgressBar fx:id="secondsProgressBar" prefHeight="26.0" prefWidth="200.0" progress="0.0" />
+                  <Label fx:id="secondsLabel" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+            <FlowPane fx:id="voteSettingPane" hgap="10.0" prefWrapLength="50.0" vgap="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="%gui.vote.optionSize" />
+                        <SegmentedButton fx:id="optionSizeSegment" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="%gui.vote.labelText" />
+                        <SegmentedButton fx:id="labelTextSegment" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="%gui.vote.labelNumber" />
+                        <SegmentedButton fx:id="labelNumberSegment" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="%gui.vote.showTotal" />
+                        <ToggleSwitch fx:id="showTotalSwitch" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets left="-15.0" />
+                           </HBox.margin>
+                        </ToggleSwitch>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="%gui.vote.voteOnce" />
+                        <ToggleSwitch fx:id="voteOnceSwitch" selected="true" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets left="-15.0" />
+                           </HBox.margin>
+                        </ToggleSwitch>
+                     </children>
+                  </HBox>
+               </children>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>

@@ -1,0 +1,28 @@
+# eclipse gui.parts
+bin/
+gen/
+src-gen/
+.metadata
+.lck
+.classpath
+.project
+.settings/
+
+# intellij gui.parts
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# gradle gui.parts
+.gradle/
+
+# Build artifacts at all
+*.class
+build/
+*.jar
+*.log
+*.bak
+
+# JRebel gui.parts - are generated
+rebel.xml

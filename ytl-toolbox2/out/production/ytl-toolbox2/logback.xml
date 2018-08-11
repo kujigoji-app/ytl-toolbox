@@ -1,0 +1,28 @@
+<configuration>
+
+	<appender name="DEFAULTFILE" class="ch.qos.logback.core.FileAppender">
+		<File>ytle.log</File>
+		<Append>true</Append>
+		<ImmediateFlush>true</ImmediateFlush>
+		<encoder>
+			<Encoding>UTF-8</Encoding>
+			<charset>UTF-8</charset>
+			<BufferedIO>false</BufferedIO>
+			<pattern>%d{yyyy.MM.ddHH:mm:ss.SSS}\t[%thread]\t%-5level\t%logger{36}\t%replace(%msg){'\n','\\\\n'}\t%replace(%replace(%xEx){'\n','\\\\n'}){'\t',''}%nopex%n</pattern>
+			<immediateFlush>false</immediateFlush>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      		<level>INFO</level>
+    	</filter>
+	</appender>
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy.MM.ddHH:mm:ss.SSS}\t[%thread]\t%-5level\t%logger{36}\t%replace(%msg){'\n','\\\\n'}\t%replace(%replace(%xEx){'\n','\\\\n'}){'\t',''}%nopex%n</pattern>
+		</encoder>
+	</appender>
+	<root level="TRACE">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEFAULTFILE" />
+	</root>
+</configuration>

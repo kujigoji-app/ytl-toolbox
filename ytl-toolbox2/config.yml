@@ -1,0 +1,11 @@
+!!config.Config
+language: ja
+lastVersionCheck: 1970/01/01
+vote:
+  labelNumber: 1
+  labelText: 0
+  optionBackground: '#e64d4d84'
+  optionSize: 4
+  optionTexts: ['', '', '', '', '', '', '', '']
+  showTotal: false
+  voteOnce: false
